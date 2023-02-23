@@ -7,11 +7,11 @@
 
 :root .fa-moon { padding-left: 10px; padding-top: 12px; display: block; }
 
-html[data-theme='dark'] { --global-bg-color: #1C1C1D; --global-code-bg-color: #2c3237; --global-text-color: #b5b5b5; --global-text-color-light: #b5b5b5; --global-theme-color: #ab0000; --global-hover-color: #ab0000; --global-footer-bg-color: #b5b5b5; --global-footer-text-color: #1C1C1D; --global-footer-link-color: #000000; --global-distill-app-color: #b5b5b5; --global-divider-color: #424246; }
+{ --global-bg-color: #1C1C1D; --global-code-bg-color: #2c3237; --global-text-color: #b5b5b5; --global-text-color-light: #b5b5b5; --global-theme-color: #ab0000; --global-hover-color: #ab0000; --global-footer-bg-color: #b5b5b5; --global-footer-text-color: #1C1C1D; --global-footer-link-color: #000000; --global-distill-app-color: #b5b5b5; --global-divider-color: #424246; }
 
-html[data-theme='dark'] .fa-sun { padding-left: 10px; padding-top: 12px; display: block; }
+.fa-sun { padding-left: 10px; padding-top: 12px; display: block; }
 
-html[data-theme='dark'] .fa-moon { display: none; }
+.fa-moon { display: none; }
 
 /****************************************************************************** Content */
 body { padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
