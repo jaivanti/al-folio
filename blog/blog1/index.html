@@ -139,9 +139,30 @@
     <p>We all know that Google is now one of the most efficient search engines present and has established a billion-dollar business but what really makes Google so special? What is the underlying algorithm behind it? Let’s understand this here.</p>
     
     <p>Google search engine makes use of one of the important algorithm called as PageRank that helps it produce high precision results. But first let’s be aware of a concept called as citation graph which will help to understand PageRank algorithm in a better way.</p>
-   <h3>Citation or Link graph of web:</h3>
+   <h4>Citation or Link graph of web:</h4>
     <p>It’s basically a network of citations/links between web pages or websites, thus representing connections between different web resources based on how they are cited by other web pages. These graphs help the search engine to map the internet, as called as Link Graphs. They reveal attributes about websites on the internet. In a link graph, each website is represented as a node, and a hyperlink between two websites is represented as a directed edge(link) between the nodes.</p>
    
  <p>Mathematically, a link graph can be represented as a directed graph, such as if page A has a hyperlink referring to page B, then an edge will be connected to nodes represented Page A and Page B. Eventually the adjacency matrix X will be XAB  = 1 for page A and XAB  = 0 for page B.</p>  
   <p>They can be used to identify the topics a website is about, so the similar sites would be linked to each other. Thus, determining site relevance. The link graphs can also help determine spam websites. While spam sites may link to normal non-spam sites, normal sites do not tend to link to spam sites, isolating spam sites into their corners of the link graph.</p> 
-    </html>
+    
+  <h4>PageRank Algorithm:</h4>
+  <p>Back then, most of the existing search engines were hardly using link graphs within their system. For Google, 518 million of these hyperlinks of map was created. 
+    These maps were further helping rapid calculation of web pages rank that will related to 
+    people’s idea of importance. Eventually, prioritizing the results of web keyword searches. 
+    A PageRank score of 0 means lowest quality pages and pagerank score of 10 means most established
+     page.</p>
+  <p>So, a link from one website to another acted as a vote of trust and authority. Thus, more links that point to a page (which acts as a vote), the more the page can be trusted, and it should be ranked higher. But PageRank algorithm extends itself to this idea by normalizing by the number of links on a page. It means a link cannot be a vote, the authority of that page is also considered.</p>
+  <p>Mathematically, we can represent this relationship as follows: </p>
+  <p>PR(i) = (1 - d) + d * (PR(j1)/L(j1) + PR(j2)/L(j2) + ... + PR(jk)/L(jk))	</p>
+  <p>d = damping factor that represents the probability of a user randomly clicking a link on webpage rather than following a link from another webpage. So, d = 0.85
+    PR(j1), PR(j2), ..., PR(jk) are the PageRank scores of the webpages that link to webpage i, and L(j1), L(j2), ..., L(jk) are the number of outgoing links from those webpages.
+    </p>
+
+    <p>The equation essentially says that the PageRank score of a webpage is a combination of the damping factor (1 - d) and the sum of the PageRank scores of the webpages that link to it, divided by the number of outgoing links from those webpages. This calculation is performed iteratively until a stable PageRank score is obtained for each webpage. By using this algorithm, Google is able to rank webpages based on their importance or popularity, which helps determine the order in which webpages are displayed in search results.</p>
+  
+    <h4>Google retires the PageRank Toolbar</h4>
+    <p>Previously, SEOs could see the PageRank score of any webpage via the Google Toolbar. Eventually, SEOs really became obsessed with the PageRank becoming the most focus tactics to rank the websites higher rather than creating great content and user experience. Also, the PageRank score was easy to manipulate. Eventually, Google retired the PageRank toolbar in 2016. </p>
+
+
+
+  </html>
